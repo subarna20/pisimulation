@@ -1,5 +1,12 @@
-The simple-vector-incr and simple-vector-add programs are simpler implementations of vector-add.  The learning objective for a developer inspecting simple-vector-incr.cpp is to follow the instructions in the comments within the code. Following Steps 1 - 5 the developer will modify the code from that of adding element-wise +1 to an input vector and eventually adding in pieces another input vector, buffer, and accessor that adds two vectors together.  The final product should look similar to simple-vector-add.cpp.
-  
+## Monte Carlo Pi Sample
+Monte Carlo Simulation is a broad category of computation that utilizes statistical analysis to reach a result. This sample uses the Monte Carlo Procedure to estimate the value of pi
+## Purpose
+The Monte Carlo procedure for estimating pi is easily parallelized, as each calculation of a random coordinate point can be considered a discrete work item. The computations involved with each work item are entirely independent of one another except for in summing the total number of points inscribed within the circle. This code sample demonstrates how to utilize the DPC++ reduction extension for this purpose.
+
+The code will attempt to execute on an available GPU and fallback to the system's CPU if a compatible GPU is not detected. The device used for the compilation is displayed in the output, along with the elapsed time to complete the computation. A rendered image plot of the computation is also written to a file.
+## The Demo modified
+I have added z axis and accordingly modified the function.
+
 | Optimized for                       | Description
 |:---                               |:---
 | OS                                | Linux* Ubuntu 18.04, Windows* 10
@@ -13,6 +20,8 @@ The implementation of the simple-vector-incr program is such that a developer fo
 
 ## License  
 This code sample is licensed under MIT license. 
+## Running the sample on Devcloud
+Run the pi.ipynb notebook and run the cells
 
 ## How to Build for CPU and GPU 
 
